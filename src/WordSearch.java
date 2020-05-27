@@ -3,13 +3,6 @@ public class WordSearch {
     public WordSearch(){ //creates an empty node
         start = null;
     }
-    public static void Intro(){
-
-    }//end intro
-    public void generate(){
-
-        return randWords;
-    }//end generate
 
     public void print(){
 
