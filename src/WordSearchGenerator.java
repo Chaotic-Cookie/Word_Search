@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class WordSearchGenerator {
 
     private String board [][];
@@ -15,6 +17,14 @@ public class WordSearchGenerator {
 
 
     public void generate(){
+        board = new String[][];
+        ArrayList<Integer> row = new ArrayList<Integer>();
+        ArrayList<Integer> Column = new ArrayList<Integer>();
+
+
+
+
+
 
 
     }//end generate
