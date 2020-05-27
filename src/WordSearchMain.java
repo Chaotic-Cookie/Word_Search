@@ -32,7 +32,7 @@ public class WordSearchMain {
                     break;
                 case 3:
                     System.out.println("Printing Solutions.");
-                    
+                    print();
                     break;
                 case 4:
                     System.out.println("Thank you for using Word Search.");
