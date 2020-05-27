@@ -17,5 +17,9 @@ public class WordSearch {
     public void solution(){
 
     }//end solution
+
+    public void generate() {
+
+    }
 }//end class
 
