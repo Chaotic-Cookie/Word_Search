@@ -26,11 +26,11 @@ public class WordSearchMain {
 
                     System.out.println("How many words would you like to look for? ");
                     String numWords = book.nextLine();
-                    pen.generate();
+                    pen.wordGenerate();
                     break;
                 case 2:
                         System.out.println("Printing Word search.");
-
+                        pen.generate();
                     break;
                 case 3:
                     System.out.println("Printing Solutions.");

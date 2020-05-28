@@ -21,7 +21,9 @@ public class WordSearch {
     }//end solution
 
     public void wordGenerate() {
+        while(numWord > 100){
 
+        }
     }
 }//end class
 
