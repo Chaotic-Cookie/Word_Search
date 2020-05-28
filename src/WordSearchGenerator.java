@@ -5,12 +5,12 @@ public class WordSearchGenerator {
     private String board [][];
     private int length;
     private int numWords;
-    private WordSearch word;
+    private WordSearch search;
     private ArrayList<String> wordList = new ArrayList<String>();
 
 
     public WordSearchGenerator(int numWords, int length){
-        word = new WordSearch();
+        search = new WordSearch();
         this.length = length;
         this.numWords = numWords;
 
@@ -22,9 +22,13 @@ public class WordSearchGenerator {
         int start = 0;
         board = new String[length][length];
 
+
         while(start < numWords) {
             ArrayList<Integer> row = new ArrayList<Integer>();
             ArrayList<Integer> Column = new ArrayList<Integer>();
+
+            String word = search.wordGenerate();
+            wordList.add(word);
         }//end while
 
 

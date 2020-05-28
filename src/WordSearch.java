@@ -17,10 +17,12 @@ public class WordSearch {
     }//end print
 
     public void solution(){
+        //find way to get it to show random letters as X
+
 
     }//end solution
 
-    public void wordGenerate() {
+    public String wordGenerate() {
         while(numWord > SIZE){
 
         }
