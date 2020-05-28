@@ -23,6 +23,7 @@ public class WordSearchMain {
             switch (menu) {
 
                 case 1:
+
                     System.out.println("How many words would you like to look for? ");
                     String numWords = book.nextLine();
                     pen.generate();
