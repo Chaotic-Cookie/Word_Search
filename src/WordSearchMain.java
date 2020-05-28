@@ -1,10 +1,11 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class WordSearchMain {
 
     public static Scanner book = new Scanner(System.in);
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         WordSearch pen = new WordSearch();
         int menu = 0;
 
@@ -29,8 +30,8 @@ public class WordSearchMain {
                     pen.wordGenerate();
                     break;
                 case 2:
-                        System.out.println("Printing Word search.");
-                        pen.generate();
+                    System.out.println("Printing Word search.");
+                    //pen.generate();
                     break;
                 case 3:
                     System.out.println("Printing Solutions.");

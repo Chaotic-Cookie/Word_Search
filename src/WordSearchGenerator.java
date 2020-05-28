@@ -14,7 +14,6 @@ public class WordSearchGenerator {
         this.length = length;
         this.numWords = numWords;
 
-
     }//end of word generator
 
 

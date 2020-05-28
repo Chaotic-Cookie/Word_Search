@@ -1,5 +1,5 @@
 public class WordSearch {
-
+    int SIZE = 100;
     public WordSearch(){ //creates an empty node
         start = null;
     }
@@ -21,7 +21,7 @@ public class WordSearch {
     }//end solution
 
     public void wordGenerate() {
-        while(numWord > 100){
+        while(numWord > SIZE){
 
         }
     }
