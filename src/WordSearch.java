@@ -1,5 +1,5 @@
 public class WordSearch {
-    int SIZE = 100;
+    char SIZE = 50;
     private WordSearchGenerator start;
     public WordSearch(){ //creates an empty node
         start = null;
@@ -51,6 +51,11 @@ public class WordSearch {
     public String wordGenerate() {
         while(numWord > SIZE){
 
+            if(spot = char){
+
+            }else{
+
+            }
         }
 
         return wordGen;

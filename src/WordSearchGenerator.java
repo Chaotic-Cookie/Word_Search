@@ -29,11 +29,9 @@ public class WordSearchGenerator {
 
             String word = search.wordGenerate();
             wordList.add(word);
+
+
         }//end while
-
-
-
-
 
 
     }//end generate
