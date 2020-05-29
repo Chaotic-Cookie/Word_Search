@@ -3,17 +3,21 @@ import java.util.Random;
 
 public class WordSearchGenerator {
 
+
     private char board [][];
     private char length; //word length
     private int numWords;
     char SIZE = 100;
+    WordSearchGenerator start = null;
+    protected WordSearchGenerator next;
     private ArrayList<Character> wordList = new ArrayList<Character>();
+
 
 
     public WordSearchGenerator(int numWords, char length){
         this.length = length;
         this.numWords = numWords;
-
+        this.next = null;
     }//end of word generator
 
 
