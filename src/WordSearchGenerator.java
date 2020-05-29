@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class WordSearchGenerator {
 
-    private String board [][];
+    private char board [][];
     private int length;
     private int numWords;
     private WordSearch search;
@@ -20,7 +20,7 @@ public class WordSearchGenerator {
 
     public void generate(){ //takes the words and makes it into the game
         int start = 0;
-        board = new String[length][length];
+        board = new char[length][length];
 
 
         while(start < numWords) {
