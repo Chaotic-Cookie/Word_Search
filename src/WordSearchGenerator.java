@@ -3,13 +3,13 @@ import java.util.ArrayList;
 public class WordSearchGenerator {
 
     private char board [][];
-    private int length;
+    private char length; //word length
     private int numWords;
     private WordSearch search;
-    private ArrayList<String> wordList = new ArrayList<String>();
+    private ArrayList<Character> wordList = new ArrayList<Character>();
 
 
-    public WordSearchGenerator(int numWords, int length){
+    public WordSearchGenerator(int numWords, char length){
         search = new WordSearch();
         this.length = length;
         this.numWords = numWords;
@@ -22,18 +22,20 @@ public class WordSearchGenerator {
         int start = 0;
         board = new char[length][length];
 
-
-        while(start < numWords) {
             ArrayList<Integer> row = new ArrayList<Integer>();
             ArrayList<Integer> Column = new ArrayList<Integer>();
 
             String word = search.wordGenerate();
             wordList.add(word);
-            for (String length : wordList) {
-                
-            }
+            for (char length : wordList) {
 
-        }//end while
+                if(start < numWords){
+
+                }
+
+
+
+            }
 
 
     }//end generate
