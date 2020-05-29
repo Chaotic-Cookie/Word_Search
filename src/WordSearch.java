@@ -31,6 +31,7 @@ public class WordSearch {
     public class solution{
         //find way to get it to show random letters as X
         //adapt this to work?
+        //Also a neat thing i found
         public boolean exist(char[][] board, String word){
 
             char[] chars = word.toCharArray();
