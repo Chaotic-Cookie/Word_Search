@@ -74,7 +74,7 @@ public class WordSearchGenerator {
             for (int i = 0; i < board.length; i++){
                 for (int j = 0; j < board.length; j++){
                     if (board[i][j] == '\u0000'){
-                        board[i][j] = (char) (rnd.nextInt(26) + 'A');
+                        board[i][j] = (char) (rnd.nextInt(Integer.parseInt("X")));
                     }
                 }
             }
