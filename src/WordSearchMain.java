@@ -6,7 +6,7 @@ public class WordSearchMain {
     public static Scanner book = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        WordSearch pen = new WordSearch();
+        WordSearchGenerator pen = new WordSearchGenerator();
         int menu = 0;
 
         while(menu != 4) {
