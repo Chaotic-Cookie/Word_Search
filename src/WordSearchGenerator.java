@@ -6,7 +6,7 @@ public class WordSearchGenerator {
     private char board [][];
     private char length; //word length
     private int numWords;
-    char SIZE = 50;
+    char SIZE = 100;
     private ArrayList<Character> wordList = new ArrayList<Character>();
 
 
@@ -68,8 +68,7 @@ public class WordSearchGenerator {
             System.out.println();
         }//end print
 
-        ///public void solution(){
-        public class solution{
+        public void solution(){
 
 
         }//end solution
