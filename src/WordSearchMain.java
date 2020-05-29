@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class WordSearchMain {
 
     public static Scanner book = new Scanner(System.in);
+    private static char[][] board;
 
     public static void main(String[] args) throws IOException {
         WordSearchGenerator pen = new WordSearchGenerator();
@@ -31,7 +32,7 @@ public class WordSearchMain {
                     break;
                 case 2:
                     System.out.println("Printing Word search.");
-                    //pen.generate();
+                    pen.printBoard(board);
                     break;
                 case 3:
                     System.out.println("Printing Solutions.");
