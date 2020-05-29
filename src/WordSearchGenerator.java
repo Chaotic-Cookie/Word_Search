@@ -6,7 +6,7 @@ public class WordSearchGenerator {
 
     private char board [][];
     private char length; //word length
-    private int numWords;
+    private final int numWords;
     char SIZE = 100;
     WordSearchGenerator start = null;
     protected WordSearchGenerator next;
@@ -86,9 +86,10 @@ public class WordSearchGenerator {
         }//end solution
 
         public Character wordGenerate() {
+
             while(numWord > SIZE){
 
-                if(spot = char){
+                if(spot = length){
 
                 }else{
 
