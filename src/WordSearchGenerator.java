@@ -27,7 +27,7 @@ public class WordSearchGenerator {
         }
     }
 
-    public static char[][] randomizeBoard(char[][] board){
+    public static char[][] randBoard(char[][] board){
         // Fills all empty spots on the board with random capital letters.
 
         Random rnd = new Random();
@@ -68,9 +68,17 @@ public class WordSearchGenerator {
             System.out.println();
         }//end print
 
-        public void solution(){
+        public char[][] solution(char[][] board){
 
-
+            Random rnd = new Random();
+            for (int i = 0; i < board.length; i++){
+                for (int j = 0; j < board.length; j++){
+                    if (board[i][j] == '\u0000'){
+                        board[i][j] = (char) (rnd.nextInt(26) + 'A');
+                    }
+                }
+            }
+            return board;
         }//end solution
 
         public Character wordGenerate() {
