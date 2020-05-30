@@ -11,6 +11,7 @@ public class WordSearchMain {
     public static void main(String[] args) throws IOException {
         WordSearchGenerator pen = new WordSearchGenerator( );
         int menu = 0;
+        int[] here = new int[]{-1,-1};
 
         while(menu != 4) {
             System.out.println("Welcome to this Word Search generator!");
@@ -34,6 +35,9 @@ public class WordSearchMain {
                     break;
                 case 2:
                     System.out.println("Printing Word search.");
+                    while(here[0] == -1){
+                        here = pen.findHorizontal(board, word)
+                    }
                     pen.printBoard(board);
                     break;
                 case 3:
