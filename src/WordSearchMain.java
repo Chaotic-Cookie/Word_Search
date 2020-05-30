@@ -35,10 +35,7 @@ public class WordSearchMain {
                     break;
                 case 2:
                     System.out.println("Printing Word search.");
-                    while(here[0] == -1){
-                        here = pen.findHorizontal(board, wordList);
-                    }
-                    pen.printBoard(board);
+                    pen.print();
                     break;
                 case 3:
                     System.out.println("Printing Solutions.");

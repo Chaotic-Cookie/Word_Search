@@ -52,8 +52,51 @@ public class WordSearchGenerator {
 
         public void print(){
 
+            for(int k = 0; k<100; k++) {
+                int path = random.nextInt(4);
+                switch (path) {
+                    case 0:
+                        charArray = stringToCharArray(hiddenWords[i]);
+                        place = checkAngel(charArray, board);
+                        if (place[0] == -1) {
+                            break;
+                        } else {
+                            doAngle(place, charArray, board);
+                            k = 100;
+                            break;
+                        }
+                }
+        }//end print
 
-            WordSearchGenerator current = null;
+        public char[][] solution(char[][] board){
+
+            Random rnd = new Random();
+            for (int i = 0; i < board.length; i++){
+                for (int j = 0; j < board.length; j++){
+                    if (board[i][j] == '\u0000'){
+                        board[i][j] = (char) (rnd.nextInt(Integer.parseInt("X")));
+                    }
+                }
+            }
+            return board;
+        }//end solution
+
+    /*public void wordGenerate() {
+
+
+            while(numWords > SIZE){
+
+                if(spot = length){
+
+                }else{
+
+                }
+            }
+
+
+            return wordGen;
+        }
+        WordSearchGenerator current = null;
             if(start == null){
                 System.out.println("This Word search is empty.");
 
@@ -69,21 +112,9 @@ public class WordSearchGenerator {
                 }
 
             }
-            System.out.println();
-        }//end print
+            System.out.println();*/
 
-        public char[][] solution(char[][] board){
 
-            Random rnd = new Random();
-            for (int i = 0; i < board.length; i++){
-                for (int j = 0; j < board.length; j++){
-                    if (board[i][j] == '\u0000'){
-                        board[i][j] = (char) (rnd.nextInt(Integer.parseInt("X")));
-                    }
-                }
-            }
-            return board;
-        }//end solution
 
     public static int[] findHorizontal(char[][] board, String insert){
 
@@ -154,6 +185,29 @@ public class WordSearchGenerator {
         return new int[]{-1, -1};
 
     }
+    public static int[] findAngle2(char[][] board, String insert){
+
+        int[] place = new int[2];
+        Random random = new Random();
+        for (int k = 0; k < 100; k++){
+            int hPos = random.nextInt(board.length - insert.length());
+            int lPos = random.nextInt(board.length - insert.length());
+            for(int i = 0; i < insert.length(); i++){
+                if((board[hPos][lPos +i]!= (insert.charAt(i)) && (board[hPos +i][lPos +i] != 'X'))){
+                    break;
+                }
+                if(i == insert.length() - 1){
+                    place[1] = hPos;
+                    place[1] = lPos;
+                    return place;
+
+                }
+            }
+
+        }
+        return new int[]{-1, -1};
+
+    }
     public static char[][] doHorizontal(int[] position, String insert, char[][] board){
         // Places an array of characters horizontally into the board array.
 
@@ -190,22 +244,20 @@ public class WordSearchGenerator {
         }
         return board;
     }
+    public static char[][] doAngle2(int[] position, String insert, char[][] board){
+        // Places an array of characters Angular into the board array.
 
-    /*public void wordGenerate() {
+        int hPos = position[1]; // Vertical Position
+        int wordLength = insert.length();
+        int lPos = position[1]; //Horizontal Position
 
-
-        while(numWords > SIZE){
-
-            if(spot = length){
-
-            }else{
-
-            }
+        for (int wordChar = 0; wordChar < wordLength; wordChar++){
+            board[hPos+ wordChar][lPos + wordChar] = insert.charAt(wordChar);
         }
+        return board;
+    }
 
 
-        return wordGen;
-    }*/
 
 
 }//end class
