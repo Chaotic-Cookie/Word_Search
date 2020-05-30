@@ -6,8 +6,10 @@ public class WordSearchMain {
     public static Scanner book = new Scanner(System.in);
     private static char[][] board;
 
+
+
     public static void main(String[] args) throws IOException {
-        WordSearchGenerator pen = new WordSearchGenerator();
+        WordSearchGenerator pen = new WordSearchGenerator( );
         int menu = 0;
 
         while(menu != 4) {
@@ -28,7 +30,7 @@ public class WordSearchMain {
 
                     System.out.println("How many words would you like to look for? ");
                     String numWords = book.nextLine();
-                    pen.wordGenerate();
+                    //pen.wordGenerate();
                     break;
                 case 2:
                     System.out.println("Printing Word search.");
@@ -36,7 +38,7 @@ public class WordSearchMain {
                     break;
                 case 3:
                     System.out.println("Printing Solutions.");
-                    pen.print();
+                    pen.solution(board);
                     break;
                 case 4:
                     System.out.println("Thank you for using Word Search.");
